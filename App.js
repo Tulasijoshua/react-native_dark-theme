@@ -6,6 +6,7 @@ export default function App() {
   const {colorScheme, toggleColorScheme} = useColorScheme();
   return (
     <View className="flex-1 justify-center items-center bg-white dark:bg-neutral-900 space-y-6">
+      <StatusBar style={colorScheme=='dark' ? 'light' : 'dark'} />
       <View className="flex-row justify-center items-center space-x-2">
         <Text className="text-xl dark:text-white">Toggle Theme</Text>
         <Switch value={colorScheme=='dark'} onChange={toggleColorScheme} />
@@ -14,7 +15,7 @@ export default function App() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ex facilisis, congue augue 
         eget, aliquam metus. Vestibulum feugiat vehicula diam, non vehicula felis consequat ut
       </Text>
-      <StatusBar style="auto" />
+      <View className="h-48 w-full bg-sky-400 dark:bg-emerald-400"></View>
     </View>
   );
 }
@@ -26,4 +27,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  whiteText: {
+    color: 'white';
+  },
+  
 });
