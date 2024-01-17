@@ -11,7 +11,7 @@ export default function App() {
         <Text className="text-xl dark:text-white">Toggle Theme</Text>
         <Switch value={colorScheme=='dark'} onChange={toggleColorScheme} />
       </View>
-      <Text className="mx-4 text-justify dark:text-white">
+      <Text className="mx-4 text-justify" style={colorScheme == 'dark' ? styles.whiteText : styles.blackText}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ex facilisis, congue augue 
         eget, aliquam metus. Vestibulum feugiat vehicula diam, non vehicula felis consequat ut
       </Text>
@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   whiteText: {
-    color: 'white';
+    color: 'white',
   },
-  
+  blackText: {
+    color: 'black',
+  }
 });
