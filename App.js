@@ -5,13 +5,14 @@ import { StyleSheet, Switch, Text, View } from 'react-native';
 export default function App() {
   const {colorScheme, toggleColorScheme} = useColorScheme();
   return (
-    <View className="flex-1 justify-center items-center bg-white dark:bg-neutral-900">
+    <View className="flex-1 justify-center items-center bg-white dark:bg-neutral-900 space-y-6">
       <View className="flex-row justify-center items-center space-x-2">
         <Text className="text-xl dark:text-white">Toggle Theme</Text>
         <Switch value={colorScheme=='dark'} onChange={toggleColorScheme} />
       </View>
-      <Text>
-        lorem23
+      <Text className="mx-4 text-justify dark:text-white">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel ex facilisis, congue augue 
+        eget, aliquam metus. Vestibulum feugiat vehicula diam, non vehicula felis consequat ut
       </Text>
       <StatusBar style="auto" />
     </View>
